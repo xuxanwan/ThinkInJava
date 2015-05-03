@@ -1,33 +1,42 @@
-package holding;
+package _11;
 
 //: holding/ListFeatures.java
 import typeinfo.pets.*;
+
 import java.util.*;
+
 import static net.mindview.util.Print.*;
 
-public class ListFeatures {
+public class ListFeaturesInteger {
   public static void main(String[] args) {
     Random rand = new Random(47);
-    List<Pet> pets = Pets.arrayList(7);
+    List<Integer> pets = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6, 7));
     print("1: " + pets);
-    Hamster h = new Hamster();
-    pets.add(h); // Automatically resizes
+    Integer eight = new Integer(8);
+    pets.add(eight); // Automatically resizes
     print("2: " + pets);
-    print("3: " + pets.contains(h));
-    pets.remove(h); // Remove by object
-    Pet p = pets.get(2);
+    print("3: " + pets.contains(eight));
+    pets.remove(eight); // Remove by object
+    
+    Integer p = pets.get(2);
     print("4: " +  p + " " + pets.indexOf(p));
-    Pet cymric = new Cymric();
-    print("5: " + pets.indexOf(cymric));
-    print("6: " + pets.remove(cymric));
-    // Must be the exact object:
+    
+    Integer five = new Integer(5);
+    Integer five1 = new Integer(5);
+   
+    print("5: "+ pets.indexOf(five));  //找得到，而对于对象找不到,Integer能equals的到
+    print("6: "+ pets.remove(five));
+    
     print("7: " + pets.remove(p));
     print("8: " + pets);
-    pets.add(3, new Mouse()); // Insert at an index
+    
+    pets.add(3, new Integer(11)); // Insert at an index
     print("9: " + pets);
-    List<Pet> sub = pets.subList(1, 4);
+    
+    List<Integer> sub = pets.subList(1, 4);
     print("subList: " + sub);
     print("10: " + pets.containsAll(sub));
+    
     Collections.sort(sub); // In-place sort
     print("sorted subList: " + sub);
     // Order is not important in containsAll():
@@ -36,17 +45,20 @@ public class ListFeatures {
     print("shuffled subList: " + sub);
     print("12: " + pets.containsAll(sub));
     
-    List<Pet> copy = new ArrayList<Pet>(pets);//[Rat, Mouse, Manx, Mutt, Pug, Cymric, Pug]
-    sub = Arrays.asList(pets.get(1), pets.get(4));// [Mouse, Cymric]
+    List<Integer> copy = new ArrayList<Integer>(pets);
+    print("copy: "+ copy);
+    sub = Arrays.asList(pets.get(1), pets.get(4));
     print("sub: " + sub);
     copy.retainAll(sub);
     print("13: " + copy);
-    copy = new ArrayList<Pet>(pets); // Get a fresh copy
+    
+    
+    copy = new ArrayList<Integer>(pets); // Get a fresh copy
     copy.remove(2); // Remove by index
     print("14: " + copy);
     copy.removeAll(sub); // Only removes exact objects
     print("15: " + copy);
-    copy.set(1, new Mouse()); // Replace an element
+    copy.set(1, new Integer(9)); // Replace an element
     print("16: " + copy);
     copy.addAll(2, sub); // Insert a list in the middle
     print("17: " + copy);
@@ -54,12 +66,12 @@ public class ListFeatures {
     pets.clear(); // Remove all elements
     print("19: " + pets);
     print("20: " + pets.isEmpty());
-    pets.addAll(Pets.arrayList(4));
+    pets.addAll(Arrays.asList(1,2,3,4));
     print("21: " + pets);
     Object[] o = pets.toArray();
     print("22: " + o[3]);
-    Pet[] pa = pets.toArray(new Pet[0]);
-    print("23: " + pa[3].id());
+    Integer[] pa = pets.toArray(new Integer[0]);
+    print("23: " + pa);
   }
 } /* Output:
 1: [Rat, Manx, Cymric, Mutt, Pug, Cymric, Pug]

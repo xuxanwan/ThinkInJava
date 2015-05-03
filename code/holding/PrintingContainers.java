@@ -1,3 +1,5 @@
+package holding;
+
 //: holding/PrintingContainers.java
 // Containers print themselves automatically.
 import java.util.*;
