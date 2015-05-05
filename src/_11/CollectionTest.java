@@ -19,7 +19,7 @@ class GenerationMoive {
     }
 }
 
-public class TestCollection {
+public class CollectionTest {
 
     public static void main(String[] args) {
         GenerationMoive gm = new GenerationMoive();
