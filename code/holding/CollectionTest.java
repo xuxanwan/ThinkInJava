@@ -1,4 +1,4 @@
-package _11;
+package holding;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -19,7 +19,7 @@ class GenerationMoive {
     }
 }
 
-public class TestCollection {
+public class CollectionTest {
 
     public static void main(String[] args) {
         GenerationMoive gm = new GenerationMoive();

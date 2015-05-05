@@ -1,4 +1,4 @@
-package _11;
+package holding;
 
 //: innerclasses/Sequence.java
 // Holds a sequence of Objects.
