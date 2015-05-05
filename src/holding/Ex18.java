@@ -1,4 +1,4 @@
-package _11;
+package holding;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class EX18 {
+public class Ex18 {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
