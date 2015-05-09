@@ -16,7 +16,6 @@ public class Ex20 {
     }
     
     public void countVowel(Set<String> words){
-        //aeiouAEIOU鏀惧叆TreeMap涓娇鐢�        
     	Map<String, Integer> vowels = new TreeMap<String, Integer>();
         vowels.put("a", 0);
         vowels.put("e", 0);
@@ -28,7 +27,6 @@ public class Ex20 {
         vowels.put("I", 0);
         vowels.put("O", 0);
         vowels.put("U", 0);
-        //閬嶅巻words锛岀粺璁�        
         System.out.println(vowels.keySet());
         for (String word : words) {
             for (Character ch : word.toCharArray()) {
@@ -38,7 +36,6 @@ public class Ex20 {
                 }
             }
         }
-        //鎵撳嵃map
         System.out.println(vowels);
     }
 
